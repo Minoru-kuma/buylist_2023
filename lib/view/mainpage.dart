@@ -1,7 +1,7 @@
+import 'package:buylist_2023/view/loginPage.dart';
 import 'package:flutter/material.dart';
 
-
-class MainPage extends StatefulWidget{
+class MainPage extends StatefulWidget {
   const MainPage({super.key, required this.title});
   final String title;
 
@@ -9,9 +9,15 @@ class MainPage extends StatefulWidget{
   State<MainPage> createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage>{
+class _MainPageState extends State<MainPage> {
+  void _pushShowPage([Title? title]) async {
+    await Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+      return LoginPage(title: "ログイン");
+    }));
+  }
+
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -21,20 +27,23 @@ class _MainPageState extends State<MainPage>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[ 
+          children: <Widget>[
             ElevatedButton(
               //最終的にこの部分は別記してForループで画面生成させたい（優先度最低）
-              onPressed: (){},
+              onPressed: () {},
               child: Text('価格を登録する'),
-              ),
-              ElevatedButton(
-              onPressed: (){},
+            ),
+            //to itemInputPage
+            ElevatedButton(
+              onPressed: () {},
               child: Text('値段を見る'),
-              ),
-              ElevatedButton(
-              onPressed: (){},
+            ),
+            // to showPage
+            ElevatedButton(
+              onPressed: () {},
               child: Text('ログインする'),
-              ),
+            ),
+            //to loginPage (constraction now)
           ],
         ),
       ),

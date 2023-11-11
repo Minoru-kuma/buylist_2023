@@ -5,17 +5,17 @@ void main() {
   runApp(const BuyListApp());
 }
 
-class BuyListApp extends StatelessWidget{
+class BuyListApp extends StatelessWidget {
   const BuyListApp({Key? key}) : super(key: key);
 
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return MaterialApp(
       title: 'コッチヤスイ',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-        ),
-        home: const MainPage(title: "コッチヤスイ"),
+      ),
+      home: const MainPage(title: "コッチヤスイ"),
     );
   }
 }
