@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'view/mainpage.dart';
+import 'view/main_page.dart';
 
 void main() {
   runApp(const BuyListApp());

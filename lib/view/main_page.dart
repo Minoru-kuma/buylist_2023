@@ -1,4 +1,4 @@
-import 'package:buylist_2023/view/loginPage.dart';
+import 'package:buylist_2023/view/login_page.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
