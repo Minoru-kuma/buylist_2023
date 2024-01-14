@@ -10,7 +10,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  void _pushShowPage([Title? title]) async {
+  void pushShowPage() async {
     await Navigator.of(context).push(MaterialPageRoute(builder: (context) {
       return LoginPage(title: "ログイン");
     }));
@@ -39,10 +39,6 @@ class _MainPageState extends State<MainPage> {
               child: Text('値段を見る'),
             ),
             // to showPage
-            ElevatedButton(
-              onPressed: () {},
-              child: Text('ログインする'),
-            ),
             //to loginPage (constraction now)
           ],
         ),

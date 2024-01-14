@@ -1,3 +1,4 @@
+import 'package:buylist_2023/view/login_page.dart';
 import 'package:flutter/material.dart';
 import 'view/main_page.dart';
 
@@ -15,7 +16,7 @@ class BuyListApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MainPage(title: "コッチヤスイ"),
+      home: const LoginPage(title: "ログイン"),
     );
   }
 }
